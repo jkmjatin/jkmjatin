@@ -1,10 +1,5 @@
 <h1 align="center">JATIN KUMAR MEHTA</h1>
-
-###
-
 <p align="center">DATA SCIENCE & ML</p>
-
-###
 
 <br clear="both">
 
