@@ -1,4 +1,7 @@
 <h1 align="center">JATIN KUMAR MEHTA</h1>
+
+###
+
 <p align="center">Software Developer | Data Science & ML Engineer</p>
 
 ###
@@ -10,12 +13,14 @@
 
 ###
 
-<p align="center">Connect: notebookjkm@gmail.com</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jkmjatin/jkmjatin/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jkmjatin/jkmjatin/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/jkmjatin/jkmjatin/output/pacman-contribution-graph.svg">
+</picture>
 
 ###
 
-<div align="center">
-  <img src="https://profile-counter.glitch.me/jkmjatin/count.svg?"  />
-</div>
+<p align="center">Email: notebookjkm@gmail.com</p>
 
 ###
