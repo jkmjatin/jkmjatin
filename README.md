@@ -4,6 +4,6 @@
     <img src="assets/name (2).png" width="500" />
     <p><center>
       Portfolio: Link yet to be added..
-    </center>center></p>
+    </center></p>
   </strong>
 </p>
