@@ -1,4 +1,4 @@
 
 <p align="center">
-  <img src="assets/name_in_black.png" width="500" />
+  <img src="assets/name (2).png" width="500" />
 </p>
