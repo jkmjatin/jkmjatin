@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+    --bg-color: #121212;
+    --card-color: #1C1C1C;
+    --text-color: #E0E0E0;
+    --primary-color: #F0B861;
+    --secondary-text-color: #A0A0A0;
+    --border-color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    height: 200vh; /* This determines the scroll length for the animation */
+    position: relative;
+}
+
+.scroll-section {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ================= SECTION 1: LANDING PAGE STYLES ================= */
+#section1 {
+    z-index: 2;
+}
+
+.landing-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+nav .logo {
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: var(--card-color);
+    color: var(--text-color);
+}
+
+.hero-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro-text h4 {
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.intro-text p {
+    color: var(--secondary-text-color);
+    font-size: 1.1rem;
+}
+
+.main-card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.about-card, .tech-card {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile-section .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-details p {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-details i {
+    margin-right: 0.5rem;
+    width: 15px;
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+.about-text strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.signature {
+    width: 150px;
+    float: right;
+    filter: invert(1);
+}
+
+.tech-card h3 {
+    margin-bottom: 1rem;
+}
+
+.tech-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+}
+
+
+/* ================= SECTION 2: DETAILED CONTENT STYLES ================= */
+
+#section2 {
+    z-index: 1;
+    opacity: 0;
+    transform: scale(1.5); /* Start zoomed in */
+    overflow-y: auto; /* Allow this section to be scrollable if content exceeds viewport */
+}
+
+.detailed-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 4rem 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.interests {
+    margin-bottom: 2rem;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.interest-tags span {
+    background-color: var(--card-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+}
+
+.interest-tags i {
+    margin-right: 0.5rem;
+}
+
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.experience-card .job:not(:last-child) {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-card .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+.experience-card .date {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+}
+.experience-card .company {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.75rem;
+}
+.experience-card .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+.experience-card strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.project {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 15px;
+}
+.project h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.project p {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    min-height: 50px;
+}
+.btn-visit {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.btn-visit:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.certificates-card .certificate {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.certificates-card .certificate:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.certificates-card img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+.cert-details h5 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+.cert-details p {
+    font-size: 0.85rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+}
+.btn-cert {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.socials-card a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+.socials-card a:hover {
+    color: var(--text-color);
+}
+.socials-card i {
+    font-size: 1.2rem;
+}
+
+.btn-download {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.75rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: opacity 0.3s;
+}
+.btn-download:hover {
+    opacity: 0.8;
+}
+.languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+.languages span {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-text-color);
+}
+.languages img {
+    width: 20px;
+    border-radius: 4px;
+}
+
+.contact-card {
+    text-align: center;
+}
+.contact-card p {
+    color: var(--secondary-text-color);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+.contact-card strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.btn-connect {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+.btn-connect:hover {
+    opacity: 0.8;
+}
+.signature-small {
+    width: 120px;
+    filter: invert(1);
+}
